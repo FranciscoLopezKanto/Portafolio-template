@@ -46,7 +46,7 @@ export const Home = () => {
           desarrollo. Me especializo en soluciones escalables y funcionales,
           combinando creatividad con un enfoque técnico sólido.
         </p>
-        <Link to="./Francisco-Lopez-CV.pdf" target="_blank">
+        <a href="/FranciscoLopezGCv2026.pdf" target="_blank" download>
           <motion.div
             initial={resume.initial}
             animate={resume.animated}
@@ -55,7 +55,7 @@ export const Home = () => {
           >
             Descargar CV
           </motion.div>
-        </Link>
+        </a>
       </motion.div>
 
       <motion.div

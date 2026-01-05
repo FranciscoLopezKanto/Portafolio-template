@@ -27,37 +27,78 @@ export const Experience = () => {
     {
       id: 1,
       image: '/vite.svg',
-      name: 'Práctica profesional — Plataforma Veterinaria',
-      position: 'Desarrollador Frontend',
-      startDate: '2024',
-      endDate: '2024',
+      name: 'Proyecto Catálogo Vial — Cliente Contratista Vial',
+      position: 'Desarrollador Full Stack',
+      startDate: 'Oct 2025',
+      endDate: 'Dic 2025',
       duration: '3 meses',
-      location: 'Chile (remoto)',
+      location: 'La Serena, Chile',
       details: [
-        'Implementé vistas y componentes reutilizables en React + TypeScript.',
-        'Mejoré UX y estados vacíos, y apliqué validaciones de formularios.',
-        'Integré estado global y utilidades de testing básico.',
+        'Desarrollo de sistema integral para gestión de inventario vial con app móvil y panel web administrativo.',
+        'Implementación de API REST con FastAPI y PostgreSQL, sincronización offline/online con cache local.',
+        'Frontend en React + TypeScript y app Android (Expo) con lectura de códigos de barras.',
+        'Despliegue y monitoreo con Docker, Nginx, Cloudflare y DigitalOcean.',
       ],
-      stack: ['React', 'TypeScript', 'Redux', 'CSS', 'React Router', 'Vitest'],
-      links: [], // agrega más tarde si tienes demo/repo
+      stack: ['React', 'TypeScript', 'FastAPI', 'Python', 'PostgreSQL', 'Expo', 'Docker', 'Nginx', 'Cloudflare', 'DigitalOcean'],
+      links: [],
     },
     {
       id: 2,
       image: '/vite.svg',
+      name: 'Sistema de Gestión y Valorización de Relaves Mineros (Backend - En Curso)',
+      position: 'Desarrollador Backend / Data',
+      startDate: 'Nov 2025',
+      endDate: 'En Curso',
+      duration: '2 meses',
+      location: 'Proyecto Personal',
+      details: [
+        'Diseño y desarrollo de API backend en Python con FastAPI para estimación de valor económico de relaves mineros.',
+        'Modelado de dominios geológico, metalúrgico y económico con trazabilidad técnica y extensibilidad.',
+        'Implementación de simulación Monte Carlo para análisis de riesgo y escenarios (P10, P50, P90).',
+        'Integración de Machine Learning (Random Forest) para predicción de leyes residuales con feature engineering.',
+        'Arquitectura modular preparada para integración futura de visión artificial y LLMs.',
+        'Nota: Actualmente solo incluye desarrollo backend. Frontend en desarrollo futuro.',
+      ],
+      stack: ['Python', 'FastAPI', 'PostgreSQL', 'Machine Learning', 'Random Forest', 'Monte Carlo', 'Data Analysis'],
+      links: [],
+    },
+    {
+      id: 3,
+      image: '/vite.svg',
       name: 'Proyecto de Título — ERP Clínico (IC La Serena Research)',
-      position: 'Full-Stack / Arquitectura',
-      startDate: '2025',
-      endDate: '2025',
-      duration: '4 meses',
+      position: 'Desarrollador Full Stack',
+      startDate: 'Mar 2025',
+      endDate: 'Jul 2025',
+      duration: '5 meses',
       location: 'La Serena, Chile',
       details: [
-        'Módulos: factibilidades, estudios, visitas, pacientes y documentos.',
-        'Backend con microservicios (NestJS, MongoDB/Mongoose, Docker).',
-        'Frontend con React + TypeScript, MUI v7 y Framer Motion.',
-        'Reportabilidad y KPIs operativos conectados a Power BI.',
+        'Desarrollo de sistema ERP modular para gestión integral de estudios clínicos.',
+        'Creación de dashboards en Power BI para visualización y análisis de datos operativos.',
+        'Implementación de módulos: gestión de pacientes, estudios, visitas y documentos.',
+        'Optimización del proceso de recolección de información, reduciendo tiempos en un 90%.',
+        'Trabajo bajo metodología ágil Scrumban con cliente real.',
+        'Backend con microservicios (NestJS, MongoDB/Mongoose, Docker) en DigitalOcean.',
       ],
-      stack: ['React', 'DigitalOcean', 'TypeScript', 'NestJS', 'MongoDB', 'Docker', 'Power BI', 'Jest','TCP','Microservicios'],
-      links: [], // agrega enlaces si corresponde
+      stack: ['React', 'TypeScript', 'Material UI', 'NestJS', 'MongoDB', 'Mongoose', 'Docker', 'Power BI', 'DigitalOcean', 'Jest', 'GitHub Actions'],
+      links: [],
+    },
+    {
+      id: 4,
+      image: '/vite.svg',
+      name: 'Práctica profesional — Plataforma Veterinaria (Hostyweb SPA)',
+      position: 'Practicante de Desarrollo de Software',
+      startDate: 'Jul 2024',
+      endDate: 'Sep 2024',
+      duration: '3 meses',
+      location: 'La Serena, Chile (remoto)',
+      details: [
+        'Desarrollo de funcionalidades para plataforma web de gestión veterinaria.',
+        'Implementación de componentes reutilizables en React y TypeScript.',
+        'Integración de Redux para gestión global del estado.',
+        'Colaboración en el diseño estructural de módulos clave: registro de usuarios, alarmas y gestión de datos.',
+      ],
+      stack: ['React', 'TypeScript', 'Redux Toolkit', 'CSS', 'React Router', 'Vitest'],
+      links: [],
     },
   ];
 
@@ -76,7 +117,7 @@ export const Experience = () => {
         description={sectionDescription}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="flex flex-col gap-6">
         {experiences.map((exp) => (
           <div
             key={exp.id}

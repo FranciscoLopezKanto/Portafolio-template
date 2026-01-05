@@ -26,48 +26,84 @@ export const Portfolio = () => {
   const projects: Project[] = [
     {
       id: 1,
+      name: 'Sistema de Gestión y Valorización de Relaves Mineros',
+      image: '/proj-relaves.jpg',
+      description:
+        'API backend en Python/FastAPI para estimación de valor económico de relaves mineros con análisis determinístico y probabilístico. (Nov-Dic 2025)',
+      details: [
+        'Desarrollo de API REST con FastAPI para análisis económico de relaves mineros.',
+        'Modelado de dominios geológico, metalúrgico y económico con trazabilidad técnica.',
+        'Implementación de simulación Monte Carlo para análisis de riesgo (P10, P50, P90).',
+        'Integración de Machine Learning (Random Forest) para predicción de leyes residuales.',
+        'Arquitectura extensible preparada para integración de visión artificial y LLMs.',
+        'Duración: 2 meses (Noviembre - Diciembre 2025)',
+      ],
+      tech: ['Python', 'FastAPI', 'PostgreSQL', 'Machine Learning', 'Random Forest', 'Monte Carlo', 'REST API'],
+      links: [],
+    },
+    {
+      id: 2,
       name: 'ERP Clínico (IC La Serena Research)',
       image: erpClinico,  
       description:
-        'Sistema modular para factibilidades, estudios, visitas, pacientes y documentos; KPIs en Power BI.',
+        'Sistema modular para gestión de estudios clínicos: factibilidades, visitas médicas, pacientes y documentos con KPIs en Power BI.',
       details: [
-        'Frontend: React + TypeScript, MUI, Vite.',
-        'Backend: NestJS (microservicios), MongoDB/Mongoose, Docker.',
-        'Toma de requerimientos y reuniones con usuarios clave.',
-        'Tests básicos con Jest y utilidades.',
+        'Frontend: React + TypeScript con Material UI y Vite para desarrollo ágil.',
+        'Backend: NestJS con arquitectura de microservicios, MongoDB/Mongoose y Docker.',
+        'Toma de requerimientos directa con usuarios finales y reuniones de seguimiento.',
+        'Tests unitarios con Jest y utilidades de validación.',
+        'Despliegue en DigitalOcean con CI/CD automatizado.',
       ],
-      tech: ['React', 'TypeScript', 'NestJS', 'MongoDB', 'Docker', 'Power BI', 'DigitalOcean', 'Jest'],
+      tech: ['React', 'TypeScript', 'Material UI', 'NestJS', 'MongoDB', 'Mongoose', 'Docker', 'Power BI', 'DigitalOcean', 'Jest', 'GitHub Actions'],
       links: [
         // { label: 'Repo', href: 'https://github.com/...' },
         // { label: 'Demo', href: 'https://...' },
       ],
     },
     {
-      id: 2,
+      id: 3,
+      name: 'Catálogo Vial - Gestión de Inventario',
+      image: '/proj-vial.jpg',
+      description:
+        'Sistema integral para gestión de inventario vial con app móvil para trabajo en terreno y panel web administrativo.',
+      details: [
+        'API REST con FastAPI y PostgreSQL con sincronización offline/online.',
+        'Frontend en React + TypeScript y app Android (Expo) con lectura de códigos de barras.',
+        'Cache local para funcionamiento sin conexión en terreno.',
+        'Despliegue y monitoreo con Docker, Nginx, Cloudflare y DigitalOcean.',
+      ],
+      tech: ['React', 'TypeScript', 'FastAPI', 'Python', 'PostgreSQL', 'Expo', 'Docker', 'Nginx', 'Cloudflare'],
+      links: [],
+    },
+    {
+      id: 4,
       name: 'Plataforma Veterinaria (Práctica)',
       image:vetlife,
       description:
-        'Componentes reutilizables, validaciones y mejoras de UX en frontend.',
+        'Sistema de gestión veterinaria con componentes reutilizables, validaciones robustas y mejoras de experiencia de usuario.',
       details: [
-        'Implementación de vistas y componentes en React + TypeScript.',
-        'Estados vacíos, validaciones y feedback visual.',
-        'Tests básicos con Vitest y utilidades.',
-        'Redux Toolkit para gestión de estado.'
+        'Desarrollo de vistas y componentes modulares con React + TypeScript.',
+        'Implementación de estados vacíos, validaciones de formularios y feedback visual.',
+        'Testing con Vitest y React Testing Library para asegurar calidad.',
+        'Gestión de estado global con Redux Toolkit.',
+        'Navegación con React Router y rutas protegidas.',
       ],
-      tech: ['React', 'TypeScript', 'CSS', 'React Router', 'Vitest', 'Redux'],
+      tech: ['React', 'TypeScript', 'Redux Toolkit', 'React Router', 'CSS', 'Vitest', 'Testing Library'],
     },
     {
-      id: 3,
+      id: 5,
       name: 'E-commerce con WebPay',
       image: duende,
       description:
-        'Checkout con WebPay, catálogo y órdenes. Arquitectura simple y mantenible.',
+        'Tienda online con integración de WebPay para pagos seguros, catálogo de productos y gestión de órdenes.',
       details: [
-        'Pasarela WebPay y flujo de pago completo.',
-        'Productos, carrito y órdenes.',
-        'Despliegue liviano y documentación de endpoints.',
+        'Integración completa de pasarela WebPay y flujo de pago seguro.',
+        'Sistema de productos con catálogo, carrito de compras y órdenes.',
+        'Backend REST API con Node.js y Express.',
+        'Base de datos PostgreSQL con relaciones optimizadas.',
+        'Despliegue liviano y documentación completa de endpoints.',
       ],
-      tech: ['React', 'Node', 'Express', 'PostgreSQL', 'WebPay'],
+      tech: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'WebPay', 'REST API'],
       links: [
 
         // { label: 'Repo', href: 'https://github.com/...' },
@@ -75,30 +111,33 @@ export const Portfolio = () => {
       ],
     },
     {
-      id: 4,
+      id: 6,
       name: 'Reservas Turísticas con Flow',
       image: '/proj-reservas.jpg',
       description:
-        'Gestión de reservas y pagos en línea con Flow; panel admin básico.',
+        'Sistema de gestión de reservas turísticas con pagos en línea usando Flow y panel administrativo con métricas.',
       details: [
-        'Creación y gestión de reservas con estados.',
-        'Integración de pagos Flow.',
-        'Panel administrativo con métricas básicas.',
+        'Creación y gestión de reservas con estados (pendiente, confirmada, cancelada).',
+        'Integración de pagos Flow para transacciones seguras.',
+        'Panel administrativo con métricas básicas y reportes.',
+        'Backend con Express y PostgreSQL para gestión de datos.',
       ],
-      tech: ['React', 'Node', 'Express', 'Flow', 'PostgreSQL'],
+      tech: ['React', 'TypeScript', 'Node.js', 'Express', 'Flow', 'PostgreSQL'],
     },
     {
-      id: 5,
+      id: 7,
       name: 'App móvil de gestión',
       image: '/proj-mobile.jpg',
       description:
-        'Autenticación, notificaciones y reportería básica en móvil.',
+        'Aplicación móvil con autenticación JWT, notificaciones push y sistema de reportes.',
       details: [
-        'React Native + NestJS, TypeORM.',
-        'Login/JWT, perfiles y notificaciones.',
-        'Reportes simples y sincronización.',
+        'Frontend móvil con React Native para iOS y Android.',
+        'Backend con NestJS y TypeORM para gestión de datos.',
+        'Autenticación segura con JWT y gestión de sesiones.',
+        'Sistema de notificaciones push y perfiles de usuario.',
+        'Reportes simples con sincronización en tiempo real.',
       ],
-      tech: ['React Native', 'NestJS', 'TypeORM', 'JWT'],
+      tech: ['React Native', 'NestJS', 'TypeORM', 'JWT', 'PostgreSQL'],
     },
   ];
 
@@ -117,7 +156,7 @@ export const Portfolio = () => {
         description={sectionDescription}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((p) => (
           <div key={p.id} onClick={() => setSelected(p)}>
             <ProjectCard
