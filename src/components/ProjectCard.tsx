@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface ProjectCardProps {
   id: number;
@@ -17,6 +17,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   tech = [],
   onClick,
 }) => {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <motion.div
       initial={{ scale: 1 }}
@@ -35,7 +37,21 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       }}
       aria-label={`Ver detalles de ${name}`}
     >
-      <img src={image} alt={name} className="object-cover w-full h-60" />
+      {imageError ? (
+        <div className="flex items-center justify-center w-full h-60 bg-gray-800">
+          <div className="text-center">
+            <p className="text-gray-400 text-sm">Imagen no disponible</p>
+            <p className="text-gray-500 text-xs mt-1">Contenido restringido</p>
+          </div>
+        </div>
+      ) : (
+        <img 
+          src={image} 
+          alt={name} 
+          className="object-cover w-full h-60" 
+          onError={() => setImageError(true)}
+        />
+      )}
       <div className="flex flex-col justify-start p-4 text-gray-300 text-sm w-full">
         <h2 className="text-lg font-bold text-white">{name}</h2>
         {description && <p className="mt-1 text-gray-400 line-clamp-2">{description}</p>}

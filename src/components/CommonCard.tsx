@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+
 interface CommonCardProps {
   id: number;
   image: string;
@@ -13,6 +15,8 @@ interface CommonCardProps {
 export const CommonCard = (props: CommonCardProps) => {
   const { image, name, position, startDate, endDate, duration, location } =
     props;
+  const [imageError, setImageError] = useState(false);
+
   return (
     <motion.div
       initial={{
@@ -28,8 +32,20 @@ export const CommonCard = (props: CommonCardProps) => {
       }}
       className="flex items-center space-x-10 w-full md:w-max py-4 px-8 rounded-xl bg-gray-900"
     >
-      <div className="w-20 h-20">
-        <img src={image} alt={name} width="100%" height="100%" />
+      <div className="w-20 h-20 flex items-center justify-center bg-gray-800 rounded">
+        {imageError ? (
+          <div className="text-center px-2">
+            <p className="text-gray-400 text-xs">No disponible</p>
+          </div>
+        ) : (
+          <img 
+            src={image} 
+            alt={name} 
+            width="100%" 
+            height="100%" 
+            onError={() => setImageError(true)}
+          />
+        )}
       </div>
       <div className="flex flex-col text-gray-400 text-sm">
         <h2 className="text-lg font-bold text-white">{position}</h2>
