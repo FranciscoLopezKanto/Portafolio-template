@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { LeaveCard } from '../components/LeaveCard';
 import { HomeMotion } from '../common/motion/Home';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export const Home = () => {
