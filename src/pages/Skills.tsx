@@ -4,8 +4,6 @@ import {
   // Frontend
   IconBrandReact,
   IconBrandNextjs,
-  IconBrandVue,
-  IconBrandNuxt,
   IconBrandTailwind,
   IconBrandJavascript,
   IconBrandTypescript,
